@@ -3,48 +3,48 @@
 
 import Foundation
 
-let a:[[Int]] = [
+var verticesRalations = Array<[Int]>([
 	[1, 2],
 	[0, 2],
 	[0, 1],
-]
+	]
+)
 
-let numberOfVertices = a.count
+let numberOfVertices = verticesRalations.count
 
-var ak = Array<[Int]>(a)
 var b = Array<[Int]>(repeating: [], count: numberOfVertices)
 var blockedVertices = Array<Bool>(repeating: false, count: numberOfVertices)
 
-var index: Int = 0
+var observingVertex: Int = 0
 var stack = Array<Int>()
 
-func circuit(v: Int) -> Bool {
+func circuitsFrom(vertex vIndex: Int) -> Bool {
 	var result: Bool = false
-	stack.append(v)
+	stack.append(vIndex)
 	
-	blockedVertices[v] = true
+	blockedVertices[vIndex] = true
 	
-	for w in ak[v] {
-		if w == index {
+	for vertex in verticesRalations[vIndex] {
+		if vertex == observingVertex {
 			var arr = stack
-			arr.append(w)
+			arr.append(vertex)
 			print(arr)
 			result = true
 		}
-		else if blockedVertices[w] == false {
-			if circuit(v: w) {
+		else if blockedVertices[vertex] == false {
+			if circuitsFrom(vertex: vertex) {
 				result = true
 			}
 		}
 	}
 	
 	if result == true {
-		unblock(u: v)
+		unblock(vertice: vIndex)
 	}
 	else {
-		for w in ak[v] {
-			if b[w].contains(v) == false {
-				b[w].append(v)
+		for vertex in verticesRalations[vIndex] {
+			if b[vertex].contains(vIndex) == false {
+				b[vertex].append(vIndex)
 			}
 		}
 	}
@@ -53,35 +53,33 @@ func circuit(v: Int) -> Bool {
 	return result
 }
 
-func unblock(u: Int) {
+func unblock(vertice vIndex: Int) {
 	
-	blockedVertices[u] = false
+	blockedVertices[vIndex] = false
 	
-	for w in b[u] {
+	for w in b[vIndex] {
 		
-		let idx = b[u].index(where: {$0 == w})
+		let idx = b[vIndex].index(where: {$0 == w})
 		if let idx = idx {
-			b[u].remove(at: idx)
+			b[vIndex].remove(at: idx)
 			if blockedVertices[idx] == true {
-				unblock(u: idx)
+				unblock(vertice: idx)
 			}
 		}
 	}
 }
 
-index = 0
+observingVertex = 0
 
-while index < numberOfVertices {
+while observingVertex < numberOfVertices {
 
-	for idx in 0..<numberOfVertices {
+	for idx in 0 ..< numberOfVertices {
 		blockedVertices[idx] = false
 		b[idx].removeAll()
 	}
-	_ = circuit(v: index)
-	index = index + 1
+	_ = circuitsFrom(vertex: observingVertex)
+	observingVertex = observingVertex + 1
 }
-
-
 
 
 
