@@ -90,102 +90,102 @@ var dsh = Point("DSH")
 var eth = Point("ETH")
 var rur = Point("RUR")
 
+var gbp = Point("GBP")
+
 // BTC connections
 
-usd.addConnectionTo(point: btc, with: 1174.2)
-btc.addConnectionTo(point: usd, with: 1 / 1174.2)
-
-rur.addConnectionTo(point: btc, with: 68600.0)
-btc.addConnectionTo(point: rur, with: 1 / 68600.0)
-
-eur.addConnectionTo(point: btc, with: 1115.0)
-btc.addConnectionTo(point: eur, with: 1 / 1115.0)
-
-btc.addConnectionTo(point: ltc, with: 0.00322)
-ltc.addConnectionTo(point: btc, with: 1 / 0.00322)
-
-usd.addConnectionTo(point: ltc, with: 3.774083)
-ltc.addConnectionTo(point: usd, with: 1 / 3.774083)
-
-rur.addConnectionTo(point: ltc, with: 223.265)
-ltc.addConnectionTo(point: rur, with: 1 / 223.265)
-
-eur.addConnectionTo(point: ltc, with: 3.607)
-ltc.addConnectionTo(point: eur, with: 1 / 3.607)
-
-btc.addConnectionTo(point: nmc, with: 0.00025)
-nmc.addConnectionTo(point: btc, with: 1 / 0.00025)
-
-usd.addConnectionTo(point: nmc, with: 0.304)
-nmc.addConnectionTo(point: usd, with: 1 / 0.304)
-
-btc.addConnectionTo(point: nvc, with: 0.00082)
-nvc.addConnectionTo(point: btc, with: 1 / 0.00082)
-
-usd.addConnectionTo(point: nvc, with: 0.965)
-nvc.addConnectionTo(point: usd, with: 1 / 0.965)
-
-rur.addConnectionTo(point: usd, with: 58.72001)
-usd.addConnectionTo(point: rur, with: 1 / 58.72001)
-
-usd.addConnectionTo(point: eur, with: 1.054)
-eur.addConnectionTo(point: usd, with: 1 / 1.054)
-
-rur.addConnectionTo(point: eur, with: 61.68083)
-eur.addConnectionTo(point: rur, with: 1 / 61.68083)
-
-btc.addConnectionTo(point: ppc, with: 0.00033)
-ppc.addConnectionTo(point: btc, with: 1 / 0.00033)
-
-usd.addConnectionTo(point: ppc, with: 0.388)
-ppc.addConnectionTo(point: usd, with: 1 / 0.388)
-
-btc.addConnectionTo(point: dsh, with: 0.05915)
-dsh.addConnectionTo(point: btc, with: 1 / 0.05915)
-
-usd.addConnectionTo(point: dsh, with: 68.13825)
-dsh.addConnectionTo(point: usd, with: 1 / 68.13825)
-
-rur.addConnectionTo(point: dsh, with: 4098.453)
-dsh.addConnectionTo(point: rur, with: 1 / 4098.453)
-
-eur.addConnectionTo(point: dsh, with: 65.85)
-dsh.addConnectionTo(point: eur, with: 1 / 65.85)
-
-ltc.addConnectionTo(point: dsh, with: 18.387)
-dsh.addConnectionTo(point: ltc, with: 1 / 18.387)
-
-eth.addConnectionTo(point: dsh, with: 3.17)
-dsh.addConnectionTo(point: eth, with: 1 / 3.17)
-
-btc.addConnectionTo(point: eth, with: 0.01885)
-eth.addConnectionTo(point: btc, with: 1 / 0.01885)
-
-usd.addConnectionTo(point: eth, with: 21.9689)
-eth.addConnectionTo(point: usd, with: 1 / 21.9689)
-
-eur.addConnectionTo(point: eth, with: 20.83018)
-eth.addConnectionTo(point: eth, with: 1 / 20.83018)
-
-ltc.addConnectionTo(point: eth, with: 5.80861)
-eth.addConnectionTo(point: ltc, with: 1 / 5.80861)
-
-rur.addConnectionTo(point: eth, with: 1288.98844)
-eth.addConnectionTo(point: rur, with: 1 / 1288.98844)
-
-
-// eur.addConnectionTo(point: usd, with: 0.8631)
-// eur.addConnectionTo(point: gbp, with: 1.4600)
+//usd.addConnectionTo(point: btc, with: 1174.2)
+//btc.addConnectionTo(point: usd, with: 1 / 1174.2)
 //
-// usd.addConnectionTo(point: eur, with: 1 / 0.8631)
-// usd.addConnectionTo(point: gbp, with: 1.6939)
+//rur.addConnectionTo(point: btc, with: 68600.0)
+//btc.addConnectionTo(point: rur, with: 1 / 68600.0)
 //
-// gbp.addConnectionTo(point: eur, with: 1 / 1.4600)
-// gbp.addConnectionTo(point: usd, with: 1 / 1.6939)
+//eur.addConnectionTo(point: btc, with: 1115.0)
+//btc.addConnectionTo(point: eur, with: 1 / 1115.0)
+//
+//btc.addConnectionTo(point: ltc, with: 0.00322)
+//ltc.addConnectionTo(point: btc, with: 1 / 0.00322)
+//
+//usd.addConnectionTo(point: ltc, with: 3.774083)
+//ltc.addConnectionTo(point: usd, with: 1 / 3.774083)
+//
+//rur.addConnectionTo(point: ltc, with: 223.265)
+//ltc.addConnectionTo(point: rur, with: 1 / 223.265)
+//
+//eur.addConnectionTo(point: ltc, with: 3.607)
+//ltc.addConnectionTo(point: eur, with: 1 / 3.607)
+//
+//btc.addConnectionTo(point: nmc, with: 0.00025)
+//nmc.addConnectionTo(point: btc, with: 1 / 0.00025)
+//
+//usd.addConnectionTo(point: nmc, with: 0.304)
+//nmc.addConnectionTo(point: usd, with: 1 / 0.304)
+//
+//btc.addConnectionTo(point: nvc, with: 0.00082)
+//nvc.addConnectionTo(point: btc, with: 1 / 0.00082)
+//
+//usd.addConnectionTo(point: nvc, with: 0.965)
+//nvc.addConnectionTo(point: usd, with: 1 / 0.965)
+//
+//rur.addConnectionTo(point: usd, with: 58.72001)
+//usd.addConnectionTo(point: rur, with: 1 / 58.72001)
+//
+//usd.addConnectionTo(point: eur, with: 1.054)
+//eur.addConnectionTo(point: usd, with: 1 / 1.054)
+//
+//rur.addConnectionTo(point: eur, with: 61.68083)
+//eur.addConnectionTo(point: rur, with: 1 / 61.68083)
+//
+//btc.addConnectionTo(point: ppc, with: 0.00033)
+//ppc.addConnectionTo(point: btc, with: 1 / 0.00033)
+//
+//usd.addConnectionTo(point: ppc, with: 0.388)
+//ppc.addConnectionTo(point: usd, with: 1 / 0.388)
+//
+//btc.addConnectionTo(point: dsh, with: 0.05915)
+//dsh.addConnectionTo(point: btc, with: 1 / 0.05915)
+//
+//usd.addConnectionTo(point: dsh, with: 68.13825)
+//dsh.addConnectionTo(point: usd, with: 1 / 68.13825)
+//
+//rur.addConnectionTo(point: dsh, with: 4098.453)
+//dsh.addConnectionTo(point: rur, with: 1 / 4098.453)
+//
+//eur.addConnectionTo(point: dsh, with: 65.85)
+//dsh.addConnectionTo(point: eur, with: 1 / 65.85)
+//
+//ltc.addConnectionTo(point: dsh, with: 18.387)
+//dsh.addConnectionTo(point: ltc, with: 1 / 18.387)
+//
+//eth.addConnectionTo(point: dsh, with: 3.17)
+//dsh.addConnectionTo(point: eth, with: 1 / 3.17)
+//
+//btc.addConnectionTo(point: eth, with: 0.01885)
+//eth.addConnectionTo(point: btc, with: 1 / 0.01885)
+//
+//usd.addConnectionTo(point: eth, with: 21.9689)
+//eth.addConnectionTo(point: usd, with: 1 / 21.9689)
+//
+//eur.addConnectionTo(point: eth, with: 20.83018)
+//eth.addConnectionTo(point: eth, with: 1 / 20.83018)
+//
+//ltc.addConnectionTo(point: eth, with: 5.80861)
+//eth.addConnectionTo(point: ltc, with: 1 / 5.80861)
+//
+//rur.addConnectionTo(point: eth, with: 1288.98844)
+//eth.addConnectionTo(point: rur, with: 1 / 1288.98844)
+
+
+ eur.addConnectionTo(point: usd, with: 0.8631)
+ eur.addConnectionTo(point: gbp, with: 1.4600)
+
+ usd.addConnectionTo(point: eur, with: 1 / 0.8631)
+ usd.addConnectionTo(point: gbp, with: 1.6939)
+
+ gbp.addConnectionTo(point: eur, with: 1 / 1.4600)
+ gbp.addConnectionTo(point: usd, with: 1 / 1.6939)
 
 var visitedPoins: [Point] = []
-var connections: [Connection] = []
-var maxP = -100000.0
 
 func traverse(from startPoint:Point, toPoint endPoint: Point) {
     
@@ -194,56 +194,19 @@ func traverse(from startPoint:Point, toPoint endPoint: Point) {
     for conn in startPoint.connections {
         if conn.endPoint != endPoint {
             if (visitedPoins.contains(conn.endPoint) == false) {
-                connections.append(
-                    Connection(startPoint: startPoint,
-                               endPoint: conn.endPoint,
-                               weight: conn.weight)
-                )
                 traverse(from: conn.endPoint, toPoint: endPoint)
                 visitedPoins.removeLast()
-                connections.removeLast()
-            }
-            
+			}
         } else {
-            
-            var connectionsList = connections
-            connectionsList.append(
-                Connection(startPoint: startPoint,
-                           endPoint: conn.endPoint,
-                           weight: conn.weight)
-            )
-            
-            var p: Double = 1.0
-            
-            for conn in connectionsList {
-                p = p * conn.weight
-            }
-            
-            if (p > 1.0) {
-                
-                if (p > maxP) {
-                    maxP = p
-                }
-                
-                var result = visitedPoins
-                result.append(endPoint)
-                let names = result.map({ $0.name })
-                print(names.joined(separator: "->"))	
-                
-                print("p = \(p)")
-                
-                for conn in connectionsList {
-                    print("\(conn.startPoint.name) : \(conn.endPoint.name)")
-                }
-                
-                print("========================")
-            }
-        }
-    }
+			var result = visitedPoins
+			result.append(endPoint)
+			let names = result.map({ $0.name })
+			print(names.joined(separator: "->"))
+		}
+	}
 }
 
 traverse(from: eur, toPoint: eur)
-print(maxP)
 
 
 
